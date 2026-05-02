@@ -1,5 +1,6 @@
 :root {
     font-size: 16px;
+    color: whitesmoke;
 }
 
 *,
@@ -11,7 +12,7 @@
 }
 
 body {
-    background-color: azure;
+    background-color: whitesmoke;
 }
 
 #flex {
@@ -24,20 +25,36 @@ body {
     flex-direction: column;
     height: 100vh;
     width: 100vw;
+    background: url(pics/pexels-dmitrii-eremin-67499966-15742697\ \(1\).jpg);
+    background-position: left;
+    background-size: auto;
+
+    
+    
 }
 
 header {
     display: flex;
     border: 1px solid black;
     padding: 2rem;
+    color: whitesmoke;
+    background-color: rgb(53, 55, 56);
+    justify-content: space-around;
     
+}
+.btns-area, .title-area {
+    margin-left: auto;
 }
 
 main {
+    
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 2.8rem;
+    
+    
+    
     /*display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200, 1fr));
     justify-content: center;
@@ -48,30 +65,63 @@ footer {
     justify-content: center;
     border: 1px solid black;
     padding: 1rem;
+    background-color: rgb(53, 55, 56);
+    color: whitesmoke;
 }
 
-.card {
+.hbtn {
+    width: 4rem;
     margin: 2px;
-    border: 1px solid blue;
+    height: 2rem;
+    text-align: center;
+    border-color: whitesmoke;
+    background-color: rgb(37, 84, 145);
+    border-radius: 20ch;
+    color: whitesmoke;
+}
+.card {
+    margin: 0px;
+    border: 1px solid whitesmoke;
+    border-radius: 0px 0px 1rem 1rem;
     height: 17rem;
     flex: 1;
     text-align: center;
-    padding: 1rem;
+    background-color: rgb(222, 253, 255);
+
 }
 .cards {
     margin: 0 20rem;
+    
 }
 .Completed {
-    background-color: rgb(22, 187, 91);
+    background-color: rgb(22, 187, 91);  
 }
 .Low {
     background-color: rgb(243, 243, 75);
+    color: black;
 }
 .Medium {
     background-color: rgb(245, 135, 10);
 }
 .High {
     background-color: rgb(218, 21, 21);
+}
+
+.Completed, .Low, .Medium, .High {
+    padding: 1rem;
+    border-bottom: 1px solid whitesmoke;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.card:hover {
+    flex: 1.2;
+    background-color: rgb(53, 55, 56);
+    opacity: 0.9;
+    box-shadow: whitesmoke 5px 3px 1rem;
+    transition: flex 1s ease-in-out 0.5s,
+                background-color 0.5s ease-in 1s,
+                opacity 0.3s ease,
+                box-shadow 0.66s ease;
 }
 
 /*
