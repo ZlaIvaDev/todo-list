@@ -69,7 +69,7 @@ footer {
     color: whitesmoke;
 }
 
-.hbtn {
+.hbtn, .cardbtn {
     width: 4rem;
     margin: 2px;
     height: 2rem;
@@ -87,7 +87,10 @@ footer {
     flex: 1;
     text-align: center;
     background-color: rgb(222, 253, 255);
+    align-items: center;
+    gap: 1rem;
 
+    display: grid;
 }
 .cards {
     margin: 0 20rem;
@@ -122,6 +125,17 @@ footer {
                 background-color 0.5s ease-in 1s,
                 opacity 0.3s ease,
                 box-shadow 0.66s ease;
+}
+.cardbtn {
+    background-color: rgb(222, 253, 255);
+    color: rgb(37, 84, 145);
+    border-color: none;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+.cardbtn:hover {
+    background-color: rgb(37, 84, 145);
+    color: whitesmoke;
 }
 
 /*
