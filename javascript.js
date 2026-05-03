@@ -10,7 +10,10 @@ item2.textContent = 'Study'
 item3.textContent = 'Read books'
 
 const openBtn = document.createElement('button');
-openBtn.textContent = 'Open'
+/*openBtn.textContent = 'Open';*/
+openBtn.innerHTML = `
+    <a href="item.html">Open<a>
+`
 
 
 card.forEach((c) => {
