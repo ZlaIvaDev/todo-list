@@ -29,6 +29,10 @@ card.forEach((c) => {
         openBtn.remove();
 })
 
+openBtn.addEventListener('click', (e) =>{
+    console.log('clicked')
+})
+
 })
 /*card.addEventListener('mouseenter', (event) => {
     card.append(item1, item2, item3);
