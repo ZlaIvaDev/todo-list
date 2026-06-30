@@ -34,13 +34,29 @@
         <footer>@ZlaIvaDev '26</footer>
     </div>
 
-    <div class="modal-container">
+    <div class="modal-container hide">
         <div class="modal">
             <h1 class="modal-title">add item to your ToDoList</h1>
 
             <div class="topsection">
-                /* dropdown menu + label */
-                /* input + label*/
+                <h3>Choose priority</h3>
+                <div class="dropdown">
+                    <div class="select">
+                        <span class="selected">Low</span>
+                        <div class="caret"></div>
+                    </div>
+
+                    <ul class="menu">
+                        <li>High</li>
+                        <li>Medium</li>
+                        <li class="active">Low</li>
+                        <li>Completed</li>
+                    </ul>
+                </div>
+
+
+                <label for="input-data"><h3>Task:</h3></label>
+                <input type="text" name="input-data" id="input-data">
             </div>
             <div class="midsection">
                 /* date + label */
@@ -48,20 +64,16 @@
             </div>
 
             <div class="notesarea">
-                <label for="notes" id="notes">add notes</label>
+                <h3>Add notes</h3>
                 <textarea name="notes" id="notes"></textarea>
-            </div>
-
-
-
-            <div class="modalbtns">
-                <button id="add">add</button>
-                <button id="cancel">cancel</button>
+                <div class="modalbtns">
+                    <button id="submit-item">submit</button>
+                    <button id="cancel">cancel</button>
+                </div>
+                
             </div>
         </div>
     </div>
-
-
     
     
     <script src="listitemjs.js"></script>
