@@ -13,6 +13,11 @@
 
 body {
     background-color: whitesmoke;
+
+    background: url(pics/pexels-dmitrii-eremin-67499966-15742697\ \(1\).jpg);
+
+    background-size: cover;
+    background-position: center;
 }
 
 #flex {
@@ -25,9 +30,12 @@ body {
     flex-direction: column;
     height: 100vh;
     width: 100vw;
-    background: url(pics/pexels-dmitrii-eremin-67499966-15742697\ \(1\).jpg);
+    /*background: url(pics/pexels-dmitrii-eremin-67499966-15742697\ \(1\).jpg);
     background-position: left;
     background-size: auto;
+
+    background-size: cover;
+    background-position: center;*/
 
     
     
@@ -53,12 +61,6 @@ main {
     flex-wrap: wrap;
     gap: 2.8rem;
     
-    
-    
-    /*display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200, 1fr));
-    justify-content: center;
-    gap: 1rem;*/
 }
 footer {
     display: flex;
@@ -147,7 +149,9 @@ a {
 a:hover {
     color: whitesmoke;
 }
-
+button {
+    cursor: pointer;
+}
 /*
 fix cards, make them pop out when hovered, only area around text should
 have colors, inside should show last 3 listed items added,
