@@ -5,32 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>priority page</title>
     <link rel="stylesheet" href="listitemstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
     <div id="flex">
-        <header>Placeholder name</header>
-        <section class="sidebar">
-            <button class="button" id="openmodal">
-                Add item
-                <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                    <path
-                    fill-rule="evenodd"
-                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-                    clip-rule="evenodd"
-                    ></path>
-                </svg>
-            </button>
-            <div class="quote-area">
-                <img src="pics/pexels-thirdman-5981507.jpg" alt="">
-            </div>
-            <div class="btns-sect">
-                <button class="btn"><a href="index.html">home</a></button>
-                <button class="btn"><a href="archive.html"></a>Archive</button>
-            </div>
-            
+        <header><h1>What to do today ?</h1></header>
 
-        </section>
-        <main></main>
+        <div class="middle">
+
+            <aside class="sidebar">
+                <button class="button" id="openmodal">
+                    Add item
+                    <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                        fill-rule="evenodd"
+                        d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
+                        clip-rule="evenodd"
+                        ></path>
+                    </svg>
+                </button>
+                <div class="quote-area">
+                    <img src="pics/pexels-thirdman-5981507.jpg" alt="">
+                </div>
+                <div class="btns-sect">
+                    <button class="btn"><a href="index.html">home</a></button>
+                    <button class="btn"><a href="archive.html"></a>Archive</button>
+                </div>
+            </aside>
+            
+            <main>
+                <div class="task-card">
+                    <h2 class="task-name">Yoga</h2>
+                    <h4 class="prio high-prio">high</h4>
+                    <div class="notes-input-text">
+                        <p class="notes-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias fugit eveniet ad ratione ullam adipisci laudantium exercitationem delectus accusamus dolorem accusantium deleniti vel ipsam, libero quos a. In, optio neque?</p>
+                    </div>
+
+                    <div class="card-btns">
+                        <button class="mark-completed item-card-btn">completed</button>
+                        <button class="send-to-archive item-card-btn">archive</button>
+                        <button class="delete-card item-card-btn">delete</button>
+                    </div>
+                </div>
+
+                <div class="task-card">
+                    <h2 class="task-name">Visit Starbucks</h2>
+                    <h4 class="prio compl">completed</h4>
+                    <div class="notes-input-text">
+                        <p class="notes-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias fugit eveniet ad ratione ullam adipisci laudantium exercitationem delectus accusamus dolorem accusantium deleniti vel ipsam, libero quos a. In, optio neque?</p>
+                    </div>
+                    
+                    <div class="card-btns">
+                        <button class="mark-completed item-card-btn">completed</button>
+                        <button class="send-to-archive item-card-btn">archive</button>
+                        <button class="delete-card item-card-btn">delete</button>
+                    </div>
+                </div>
+                
+            </main> 
+        </div>
+
+        
         <footer>@ZlaIvaDev '26</footer>
     </div>
 
