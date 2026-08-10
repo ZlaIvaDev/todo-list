@@ -50,8 +50,9 @@ aside {
     flex-direction: column;
     flex: 1 1 auto;
     max-width: 25vw;
+    min-width: 20vw;
     
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background-color: #2a2d35;
 }
@@ -96,6 +97,7 @@ img {
     overflow: hidden;
     font-size: 15px;
     cursor: pointer;
+    margin-bottom: auto;
 }
 .icon {
     width: 1.5rem;
@@ -163,6 +165,7 @@ a {
     font-family: 'Roboto', 'Segoe UI', sans-serif;
     text-transform: uppercase;
     color: var(--color);
+    margin-bottom: 2rem;
 }
 
 a::after, a::before{
@@ -466,6 +469,11 @@ p.notes-text {
     padding-top: 1rem;
 }
 
+.quote-area {
+    position: absolute;
+    max-width: 25vw;
+    min-width: 17vw;
+}
 
 /* prio colors */
 .high-prio {
