@@ -1,6 +1,7 @@
 console.log('items checkuo!');
 
 const modalcontainer = document.querySelector('.modal-container');
+const main = document.querySelector('main');
 
 const modalbtn = document.getElementById('openmodal');
 modalbtn.addEventListener('click', function event() {
@@ -65,7 +66,58 @@ cancel.addEventListener('click', () => {
 })
 
 /* now onto truly adding items to file.*/
-const additem = document.querySelector('#submit-item');
+const additem = document.getElementById('submit-item');
+additem.addEventListener('click', (e) => {
+    const new_card = document.createElement('div');
+    new_card.classList.add('task-card');
+    
 
-/*  and now, event listeners for our buttons. Creating elements in real time.*/
 
+    const card_name = document.createElement('h2');
+    card_name.classList.add('task-name');
+    card_name.textContent = document.getElementById('input-name').value;
+
+
+    const card_prio = document.createElement('h4');
+    card_prio.classList.add('prio');
+    card_prio.textContent = document.querySelector('.selected').textContent;
+    if (card_prio.textContent == 'Low') {
+        card_prio.classList.add('low-prio')
+    } else if (card_prio.textContent == 'Medium') {
+        card_prio.classList.add('med-prio')
+    } else if (card_prio.textContent == 'High') {
+        card_prio.classList.add('high-prio')
+    } else {
+        card_prio.classList.add('compl')
+    }
+
+    const card_date = document.createElement('h6');
+    card_date.classList.add('task-date');
+    card_date.textContent = document.getElementById('time_n_date').value;
+
+    const notes_div = document.createElement('div');
+    const notes_text = document.createElement('p');
+    notes_div.classList.add('notes-input-text');
+    notes_text.classList.add('notes-text');
+    notes_text.textContent = document.getElementById('notes').value;
+    notes_div.appendChild(notes_text);
+
+    const btns_div = document.createElement('div');
+    btns_div.classList.add('card-btns');
+    const btnCompleted = document.createElement('button')
+    const btnArchive = document.createElement('button');
+    const btnDel = document.createElement('button');
+    btnCompleted.classList.add('mark-completed','item-card-btn');
+    btnCompleted.textContent = 'completed';
+    btnArchive.classList.add('send-to-archive','item-card-btn');
+    btnArchive.textContent = 'archive';
+    btnDel.classList.add('delete-card','item-card-btn');
+    btnDel.textContent = 'delete';
+    btns_div.append(btnCompleted, btnArchive, btnDel);
+
+    new_card.append(card_name, card_prio, card_date, notes_div, btns_div);
+    main.appendChild(new_card);
+    modalcontainer.classList.remove('show');
+    modalcontainer.classList.add('hide');
+
+})
