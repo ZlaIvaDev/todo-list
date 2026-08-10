@@ -12,8 +12,11 @@
 body {
     background-color:whitesmoke;
       font-family: "DM Mono", monospace, serif;
+      background-color: #363a43;
+}
 
-
+input, button, textarea, select, label, h1, h2, h3, h4, h5, h6 {
+    font: inherit;
 }
 .dm-mono-regular {
   font-family: "DM Mono", monospace;
@@ -212,11 +215,12 @@ a:hover {
 
     background-color: rgba(0,0,0,0.3);
     transition: opacity 0.3s ease;
+    
 }
 .modal {
     width: 500px;
     max-width: 100%;
-    max-height: 40rem;
+    max-height: 45rem;
     padding: 2rem;
     border-radius: 0.5rem 1.5rem;
     box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
@@ -228,6 +232,7 @@ a:hover {
     flex-direction: column;
     justify-content: flex-start;
     text-align: center;
+    font-family: ;
 }
 .show {
     opacity: 1;
@@ -239,16 +244,24 @@ a:hover {
 }
 
 
-
+h3 {
+    margin-top: 0.5rem;
+}
 
 .dropdown {
-    min-width: 1rem;
+    min-width: 0.8rem;
     position: relative;
     margin: 0.25rem;
-    padding: 2rem;
+    padding: 0;
+    margin: 0 32px;
 }
 .dropdown * {
     box-sizing: border-box;
+}
+
+input[type="date"] {
+    color-scheme: dark;
+    
 }
 
 .select {
@@ -357,6 +370,9 @@ textarea {
     color: #9fa5b5;
     margin: 0 2rem;
     min-height: 6rem; 
+    font-family: "DM Mono", monospace;
+    scrollbar-width: thin;
+    scrollbar-color: #666 #323232;
 }
 
 .modalbtns button {
@@ -369,10 +385,10 @@ textarea {
 
 .modalbtns {
     padding: 0;
-    margin: 1rem 0 0 0; /
+    margin: 1rem 0 0 0;
     display: flex;
     gap: 0.5rem;
-    justify-content: center; 
+    justify-content: center;
 }
 
 /* card with data styles */
@@ -399,6 +415,7 @@ main {
     justify-content:  space-between;
     padding: 1rem;
     margin: auto;
+    flex-wrap: wrap;
 }
 
 .task-card {
@@ -419,6 +436,8 @@ main {
 .notes-input-text {
     flex: 0 0 120px;
     overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #666 #323232;
 }
 p.notes-text {
     overflow-wrap: break-word;
@@ -432,8 +451,15 @@ p.notes-text {
     background-color: var(--color);
     color: #b7becf;
     font-family: "DM Mono", monospace;
+    cursor: pointer;
 
 }
+
+/* time date label and widget */
+.time_label {
+    padding-top: 1rem;
+}
+
 
 /* prio colors */
 .high-prio {

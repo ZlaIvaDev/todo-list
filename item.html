@@ -41,6 +41,7 @@
                 <div class="task-card">
                     <h2 class="task-name">Yoga</h2>
                     <h4 class="prio high-prio">high</h4>
+                    <h6 class="task-date">10/08/2026</h6>
                     <div class="notes-input-text">
                         <p class="notes-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias fugit eveniet ad ratione ullam adipisci laudantium exercitationem delectus accusamus dolorem accusantium deleniti vel ipsam, libero quos a. In, optio neque?</p>
                     </div>
@@ -55,8 +56,9 @@
                 <div class="task-card">
                     <h2 class="task-name">Visit Starbucks</h2>
                     <h4 class="prio compl">completed</h4>
+                    <h6 class="task-date">09/08/2026</h6>
                     <div class="notes-input-text">
-                        <p class="notes-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestias fugit eveniet ad ratione ullam adipisci laudantium exercitationem delectus accusamus dolorem accusantium deleniti vel ipsam, libero quos a. In, optio neque?</p>
+                        <p class="notes-text">Aut laboriosam ullam repellendus repudiandae molestias, ex architecto quaerat incidunt rerum fugit labore? Commodi distinctio harum ullam, eligendi quasi placeat alias, totam quaerat delectus pariatur atque, quisquam praesentium ad officia.</p>
                     </div>
                     
                     <div class="card-btns">
@@ -75,10 +77,9 @@
 
     <div class="modal-container hide">
         <div class="modal">
-            <h1 class="modal-title">add item to your ToDoList</h1>
 
             <div class="topsection">
-                <h3>Choose priority</h3>
+                <h4>Choose priority</h4>
                 <div class="dropdown">
                     <div class="select">
                         <span class="selected">Low</span>
@@ -92,14 +93,12 @@
                         <li>Completed</li>
                     </ul>
                 </div>
-
-
-                <label for="input-data"><h3>Task:</h3></label>
-                <input type="text" name="input-data" id="input-data">
+                <label for="input-name"><h3>Task name:</h3></label>
+                <input type="text" name="input-name" id="input-name">
             </div>
             <div class="midsection">
-                /* date + label */
-                /* time + label */
+                <label for="time_n_date" class="time_label">add date</label>
+                <input type="date" id="time_n_date">
             </div>
 
             <div class="notesarea">

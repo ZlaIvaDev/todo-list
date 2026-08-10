@@ -1,19 +1,5 @@
 console.log('items checkuo!');
 
-/* add item button functionality */
-/* napisati funkciju show modal koja izbacuje modal meni */
-/* funkcija ce imati polja za unos, */
-/* i meni sa izborom prioriteta (high/medium/low/ completed) */
-
-/* takodje, napisati create modal funkc ?
-ili jednostavno dodati modal u html */
-
-
-
-/* js za padajuci meni */
-
-/* prouci ga kasnije ! tj ujutru hvala !*/
-
 const modalcontainer = document.querySelector('.modal-container');
 
 const modalbtn = document.getElementById('openmodal');
@@ -79,4 +65,7 @@ cancel.addEventListener('click', () => {
 })
 
 /* now onto truly adding items to file.*/
-const additem = document.querySelector('#add');
+const additem = document.querySelector('#submit-item');
+
+/*  and now, event listeners for our buttons. Creating elements in real time.*/
+
