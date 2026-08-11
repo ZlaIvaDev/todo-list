@@ -9,11 +9,11 @@ item1.textContent = 'Do yoga'
 item2.textContent = 'Study'
 item3.textContent = 'Read books'
 
-const openBtn = document.createElement('button');
+const openBtn = document.createElement('a');
 /*openBtn.textContent = 'Open';*/
-openBtn.innerHTML = `
-    <a href="item.html">Open<a>
-`
+
+openBtn.textContent = 'open';
+openBtn.href = 'item.html';
 
 
 card.forEach((c) => {
@@ -34,19 +34,3 @@ openBtn.addEventListener('click', (e) =>{
 })
 
 })
-/*card.addEventListener('mouseenter', (event) => {
-    card.append(item1, item2, item3);
-    card.appendChild(openBtn)
-    openBtn.classList.add('cardbtn')
-})
-card.addEventListener('mouseleave',(event) => {
-    item1.remove();
-    item2.remove();
-    item3.remove();
-    openBtn.remove();
-})*/
-
-/*
-well add real code,
-atm this is placeholder code.
-*/

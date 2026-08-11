@@ -121,3 +121,9 @@ additem.addEventListener('click', (e) => {
     modalcontainer.classList.add('hide');
 
 })
+
+const removeCard = document.getElementsByClassName('delete-card');
+
+removeCard.addEventListener('click', (e) => {
+    main.removeChild(e.target)
+})
