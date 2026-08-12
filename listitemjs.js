@@ -122,8 +122,3 @@ additem.addEventListener('click', (e) => {
 
 })
 
-const removeCard = document.getElementsByClassName('delete-card');
-
-removeCard.addEventListener('click', (e) => {
-    main.removeChild(e.target)
-})
