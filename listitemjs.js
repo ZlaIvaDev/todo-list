@@ -125,7 +125,9 @@ additem.addEventListener('click', (e) => {
         btnDel.parentElement.parentElement.remove()
     })
     btnCompleted.addEventListener('click',() => {
-        card_prio.classList.replace('low-prio' || 'med-prio' || 'high-prio', 'compl');
+        //card_prio.classList.replace('low-prio' || 'med-prio' || 'high-prio', 'compl');
+        card_prio.classList.remove('low-prio', 'med-prio', 'high-prio');
+        card_prio.classList.add('compl')
         card_prio.textContent = 'completed';
         alert('Task completed! ^_^')
         btnCompleted.disabled = true;
@@ -142,7 +144,10 @@ const deleteCardBtns = document.querySelectorAll('.delete-card');
 const cardPriorityText = document.querySelectorAll('h4');
 
 completedBtns.forEach(btn => {
-    btn.addEventListener('click',markCompleted);
+    btn.addEventListener('click', () => {
+        alert('already completed!')
+        btn.disabled = true;
+    });
 })
 
 deleteCardBtns.forEach(btn => {
@@ -157,10 +162,7 @@ deleteCardBtns.forEach(btn => {
     })
 })
 
-function markCompleted() {
-    alert('completed is clicked')
-    cardPriorityText.forEach(c => {
-        alert(`card prio is ${c.target.textContent}`)
-    })
-
-}
+const archiveBtn = document.querySelector('.archiveLink');
+archiveBtn.addEventListener('click', ()=> {
+    alert('Archive is currently under construction!');
+})
