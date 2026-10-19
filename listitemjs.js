@@ -105,20 +105,62 @@ additem.addEventListener('click', (e) => {
     const btns_div = document.createElement('div');
     btns_div.classList.add('card-btns');
     const btnCompleted = document.createElement('button')
-    const btnArchive = document.createElement('button');
+    //const btnArchive = document.createElement('button');
     const btnDel = document.createElement('button');
     btnCompleted.classList.add('mark-completed','item-card-btn');
     btnCompleted.textContent = 'completed';
-    btnArchive.classList.add('send-to-archive','item-card-btn');
-    btnArchive.textContent = 'archive';
+    //btnArchive.classList.add('send-to-archive','item-card-btn');
+    //btnArchive.textContent = 'archive';
     btnDel.classList.add('delete-card','item-card-btn');
     btnDel.textContent = 'delete';
-    btns_div.append(btnCompleted, btnArchive, btnDel);
+    btns_div.append(btnCompleted, btnDel);
 
     new_card.append(card_name, card_prio, card_date, notes_div, btns_div);
     main.appendChild(new_card);
     modalcontainer.classList.remove('show');
     modalcontainer.classList.add('hide');
 
+    btnDel.addEventListener('click', () => {
+        alert('Card removed!')
+        btnDel.parentElement.parentElement.remove()
+    })
+    btnCompleted.addEventListener('click',() => {
+        card_prio.classList.replace('low-prio' || 'med-prio' || 'high-prio', 'compl');
+        card_prio.textContent = 'completed';
+        alert('Task completed! ^_^')
+        btnCompleted.disabled = true;
+    })
+
 })
 
+// what we need now is functionality for completed and delete buttons!
+// completed should change prio ex: low -> completed etc.
+// del should plainly delete the whole card!
+
+const completedBtns = document.querySelectorAll('.mark-completed');
+const deleteCardBtns = document.querySelectorAll('.delete-card');
+const cardPriorityText = document.querySelectorAll('h4');
+
+completedBtns.forEach(btn => {
+    btn.addEventListener('click',markCompleted);
+})
+
+deleteCardBtns.forEach(btn => {
+    btn.addEventListener('click', e => {
+        alert('Task card removed!')
+        console.log(`event target is : ${e.target}`)
+        console.log(`btn parent is : ${btn.parentElement.parentElement}`)
+        console.log(`btn parent class is : ${btn.parentElement.parentElement.classList}`)
+        console.log(`btn parent node is : ${btn.parentNode.classList}`)
+        //e.target.parentElement.parentElement.remove
+        btn.parentElement.parentElement.remove()
+    })
+})
+
+function markCompleted() {
+    alert('completed is clicked')
+    cardPriorityText.forEach(c => {
+        alert(`card prio is ${c.target.textContent}`)
+    })
+
+}
